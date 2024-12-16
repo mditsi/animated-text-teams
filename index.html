@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation de Texte pour Teams</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f2f1;
+            margin: 0;
+        }
+
+        #animated-text {
+            font-size: 2em;
+            font-weight: bold;
+            color: #0078d4;
+            border-right: .15em solid #0078d4;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #0078d4 }
+        }
+    </style>
+</head>
+<body>
+    <div id="animated-text">dernier déjeuner équipe Sales 2024</div>
+</body>
+</html>
